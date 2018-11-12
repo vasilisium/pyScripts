@@ -7,10 +7,12 @@ pip list -o --format json | ConvertFrom-Json | foreach {pip install $_.name -U -
 # del pip puckages
 pip uninstall -r requirements.txt
 
-''' venv issuse
+# venv issuse
 run      python -m venv virtual --without-pip
+
 activate env\Scripts\activate
-run      C:\test\virtual\Scripts>python get-pip.py'''
+
+run      C:\test\virtual\Scripts>python get-pip.py
 
 #check executable path
 python -c "import sys; print(sys.executable)"
