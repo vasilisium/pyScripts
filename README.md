@@ -5,3 +5,6 @@ pip list -o --format json | ConvertFrom-Json | foreach {pip install $_.name -U -
 
 # del pip puckages
 pip uninstall -r requirements.txt
+
+#check executable path
+python -c "import sys; print(sys.executable)"
