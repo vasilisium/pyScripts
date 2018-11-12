@@ -14,5 +14,5 @@ activate env\Scripts\activate
 
 run      C:\test\virtual\Scripts>python get-pip.py
 
-#check executable path
+# check executable path
 python -c "import sys; print(sys.executable)"
