@@ -8,7 +8,7 @@ pip list -o --format json | ConvertFrom-Json | foreach {pip install $_.name -U -
 pip uninstall -r requirements.txt
 
 # venv issuse
-run      python -m venv virtual --without-pip
+run      python -m venv env --without-pip
 
 activate env\Scripts\activate
 
