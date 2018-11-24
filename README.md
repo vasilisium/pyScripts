@@ -16,3 +16,6 @@ run      C:\test\virtual\Scripts>python get-pip.py
 
 # check executable path
 python -c "import sys; print(sys.executable)"
+
+# coins
+coin parser from https://coinmarketcap.com/all/views/all/
