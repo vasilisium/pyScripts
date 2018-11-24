@@ -65,7 +65,7 @@ def main():
     coins = serch_coins()
     
     while True:
-        print('-------------------------------------------------------')
+        print('-------------------------------------------------------git ')
         search = input('Enter coin to serch ("BTC", "btc", "bitco"...):').lower()
         if search=='':
             break
