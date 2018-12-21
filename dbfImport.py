@@ -1,3 +1,4 @@
+# https://github.com/vasilisium/pyScripts#dbfimportpy
 from tkinter import filedialog, Tk
 
 from dbfread  import DBF
