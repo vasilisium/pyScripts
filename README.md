@@ -19,3 +19,8 @@ python -c "import sys; print(sys.executable)"
 
 # coins.py
 coin parser from https://coinmarketcap.com/all/views/all/
+
+# dbfImport.py
+convert .dbf file to .xlsx 
+
+to compile dbfImport.py to exe run: pyinstaller --onefile dbfImport.py
