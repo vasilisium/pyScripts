@@ -1,17 +1,19 @@
-from tkinter import filedialog
-from tkinter import *
+from tkinter import filedialog, Tk
 
 from dbfread  import DBF
 from win32com.client import Dispatch
-import os
+from os import path
 import xlsxwriter
 
 def export_dbf_2_xlsx(name):
+    if name=='':
+        return ''
+
     table = DBF(name)
 
-    base = '.'.join(os.path.basename(name).split('.')[0:-1:])
-    directory = os.path.dirname(filename)
-    xlsFile = os.path.join(directory, base + '.xlsx')
+    base = '.'.join(path.basename(name).split('.')[0:-1:])
+    directory = path.dirname(filename)
+    xlsFile = path.join(directory, base + '.xlsx')
     workbook = xlsxwriter.Workbook(xlsFile)
     worksheet = workbook.add_worksheet()
 
@@ -39,13 +41,9 @@ def export_dbf_2_xlsx(name):
 root = Tk()
 filename =  filedialog.askopenfilename(initialdir = ".\\", \
 title = "Select file", filetypes = (("dbf files","*.dbf"),))
-# print(filename)
-# base=os.path.basename(filename)
-# print(base)
-# name = base.split('.')[0]
 xlFile = export_dbf_2_xlsx(filename)
-xl = Dispatch("Excel.Application")
-xl.Visible = True
+if xlFile!='':
+    xl = Dispatch("Excel.Application")
+    xl.Visible = True
 
-# absPath=os.path.abspath(xlFile)
-wb = xl.Workbooks.Open(xlFile)
+    wb = xl.Workbooks.Open(xlFile)
